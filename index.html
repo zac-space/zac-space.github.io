@@ -1,21 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to Bluejoy</title>
+  <title>BLEUJOY Notice</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #0d1117;
+      color: white;
+    }
+    a {
+      color: #58a6ff;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to Bluejoy!</h1>
-  <p>This is the official website for our games and services.</p>
 
-  <h2>Explore Our Pages</h2>
-  <ul>
-    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="/terms-of-services.html">Terms of Service</a></li>
-    <li><a href="/developers.html">Developer Info</a></li>
-    <li><a href="/contact.html">Contact Us</a></li>
-  </ul>
+  <h1>BLEUJOY is no longer in operation.</h1>
 
-  <p>Thank you for visiting!</p>
+  <p>
+    All services have been discontinued.
+  </p>
+
+  <p>
+    Please visit IZACWARES for current services and information.
+  </p>
+
+  <p id="countdown">
+    You will be redirected in 5 seconds...
+  </p>
+
+  <p>
+    If not redirected,
+    <a href="https://www.izacwares.com">click here</a>.
+  </p>
+
+  <script>
+    let seconds = 5;
+    const countdownElement = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      seconds--;
+      countdownElement.innerText = "You will be redirected in " + seconds + " seconds...";
+
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.izacwares.com";
+      }
+    }, 1000);
+  </script>
+
 </body>
 </html>
