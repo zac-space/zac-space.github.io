@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <title>Privacy Policy</title>
 
-  <!-- 5초 후 이동 -->
-  <meta http-equiv="refresh" content="5; url=https://www.izacwares.com/privacy-policy">
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,7 +26,7 @@
     For current services and policies, please refer to IZACWARES.
   </p>
 
-  <p>
+  <p id="countdown">
     You will be redirected in 5 seconds...
   </p>
 
@@ -37,6 +34,21 @@
     If not redirected,
     <a href="https://www.izacwares.com/privacy-policy">click here</a>.
   </p>
+
+  <script>
+    let seconds = 5;
+    const countdownElement = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      seconds--;
+      countdownElement.innerText = "You will be redirected in " + seconds + " seconds...";
+
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.izacwares.com/privacy-policy";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
